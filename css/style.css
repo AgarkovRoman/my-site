@@ -1,0 +1,108 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    color: #313131;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+
+    word-spacing: 2px;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.wrapper {
+    max-width: 1240px;
+    margin: 0 10%;
+}
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+html::selection,
+br::selection{
+    color: rgb(233, 233, 233);
+    background: rgb(15, 22, 32);;
+}
+
+.aboutme {
+    margin-top: 30px;
+}
+
+.aboutme .avatar {
+    width: 7rem;
+    height: auto;
+    border-radius: 50%;
+}
+.aboutme__avatar {
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+.title--small {
+    font-size: 1rem;
+}
+.aboutme__title {
+    margin-bottom: 1.5rem;
+}
+
+.aboutme .paragraph {
+    max-width: 95%;
+}
+.aboutme__paragraph{
+    margin-bottom: 1.5rem;
+}
+
+.aboutme .skills {
+    margin-bottom: 1.5rem;
+}
+
+.aboutme .skills-container__img {
+    width: 60px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    padding: 5px;
+}
+.skills-container__skill {
+    margin-right: 5px;
+}
+
+.skills__title {
+    margin-bottom: .5rem;
+}
+
+.projects__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.project {
+    border: 1px solid #313131;
+    border-radius: .3rem;
+    width: 33%;
+    background-color: aquamarine;
+    padding: .5rem;
+}
+
+.projects__title {
+    margin-bottom: .5rem;
+}
