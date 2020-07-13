@@ -91,18 +91,60 @@ br::selection{
     margin-bottom: .5rem;
 }
 
+/*------------projects-----------*/
+
 .projects__container {
-    display: flex;
-    flex-wrap: wrap;
-}
-.project {
-    border: 1px solid #313131;
-    border-radius: .3rem;
-    width: 33%;
-    background-color: aquamarine;
-    padding: .5rem;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
 }
 
 .projects__title {
     margin-bottom: .5rem;
+}
+
+.project-link {
+    font-size: 4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    -webkit-text-stroke: .1px #313131;
+}
+
+.project-link:hover {
+    font-weight: 500;
+    color: #313131;
+    -webkit-text-stroke: none;
+    transition: .4s;
+}
+
+.projects__item {
+    margin-bottom: 1rem;
+}
+
+.projects__link {
+    margin-bottom: 2rem;
+}
+
+.projects__link::after {
+    content: '';
+    display: block;
+    background-color: #313131;
+    height: 1px;
+    width: 100%;
+}
+
+.projects__paragraph {
+    margin-bottom: 1rem;
+}
+
+.projects__img {
+    width: 30rem;
+    padding-bottom: 30%;
+    border-radius: .3rem;
+    margin: 0 auto;
+
+    background-image: url(../css/img/quiz.png);
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
