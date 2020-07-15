@@ -30,7 +30,8 @@ h4::selection,
 h5::selection,
 h6::selection,
 html::selection,
-br::selection{
+br::selection,
+a::selection{
     color: rgb(233, 233, 233);
     background: rgb(15, 22, 32);;
 }
@@ -102,10 +103,17 @@ br::selection{
     margin-bottom: .5rem;
 }
 
+.link {
+    text-decoration: none;
+}
+
+.link__gray {
+    color: #313131;
+}
+
 .project-link {
     font-size: 4rem;
     font-weight: bold;
-    text-decoration: none;
     color: #fff;
     -webkit-text-stroke: .1px #313131;
 }
@@ -118,7 +126,7 @@ br::selection{
 }
 
 .projects__item {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .projects__link {
@@ -126,6 +134,14 @@ br::selection{
 }
 
 .projects__link::after {
+    content: '';
+    display: block;
+    background-color: #313131;
+    height: 1px;
+    width: 100%;
+}
+
+.projects__item::after {
     content: '';
     display: block;
     background-color: #313131;
@@ -143,8 +159,29 @@ br::selection{
     border-radius: .3rem;
     margin: 0 auto;
 
-    background-image: url(../css/img/quiz.png);
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat;
+}
+
+.quiz__img {
+    background-image: url(../css/img/quiz.png);
+}
+
+.budget__img {
+    background-image: url(../css/img/budget.png);
+}
+
+.todo__img { 
+    background-image: url(../css/img/todo.png);
+}
+
+.footer {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: space-around;
 }
