@@ -200,7 +200,7 @@ a::selection{
 }
 
 .author-info {
-    font-size: .6rem;
+    font-size: .7rem;
     display: flex;
     flex-direction: column;
     width: 40%;
