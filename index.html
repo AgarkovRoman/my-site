@@ -34,14 +34,21 @@
                 <div class="skills-container__skill skill">
                     <img class="skills-container__img" src="./img/js.png" alt="js" title="Javascript">
                 </div>
-                <div class="skills-container__skill skill">
+                <div class="skills-container__skill skills-container__skill_center skill">
                     <img class="skills-container__img" src="./img/react.svg" alt="react" title="React">
+                </div>
+                <div class="skills-container__skill skills-container__skill_center skill">
+                    <img class="skills-container__img" src="./img/redux.svg" alt="redux" title="Redux">
                 </div>
                 <div class="skills-container__skill skill">
                     <img class="skills-container__img" src="./img/git.png" alt="git" title="Git">
                 </div>
+                <div class="skills-container__skill skills-container__skill_center skill">
+                    <img class="skills-container__img" src="./img/sass.svg" alt="sass/scss" title="Sass/Scss">
+                </div>
                 <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/sass.svg" alt="sass" title="Sass">
+                    <img class="skills-container__img" style="height: 60px;" src="./img/gulp.svg" alt="gulp"
+                        title="Gulp">
                 </div>
                 <div class="skills-container__skill skill">
                     <img class="skills-container__img" src="./img/ts.png" alt="ts" title="TypeScript">
@@ -52,10 +59,6 @@
                 <div class="skills-container__skill skill">
                     <img class="skills-container__img" src="./img/apollo.png" alt="apollo" title="Apollo client">
                 </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" style="height: 60px;" src="./img/gulp.svg" alt="gulp"
-                        title="Gulp">
-                </div>
             </div>
         </section>
         <section class="projects wrapper">
@@ -63,20 +66,22 @@
             <div class="projects__container">
                 <div class="projects__item item">
                     <div class="item__link">
-                        <a class="item__link_title" href="https://nameless-peak-83944.herokuapp.com/"
-                            target="_blank">quiz
-                            app
+                        <a class="item__link_title" href="https://nameless-peak-83944.herokuapp.com/" target="_blank"
+                            rel="noopener">
+                            quiz app
                         </a>
                     </div>
                     <div class="item__container">
                         <div class="item__information">
                             <div class="information__container">
-                                <p class="projects__paragraph">Приложение для создания опросов и&nbsp;тестов,
+                                <p class="projects__paragraph">Приложение для создания опросов и&nbsp;тестов
                                     с&nbsp;регистрацией.</p>
                                 <p class="projects__paragraph">
-                                    Стэк: React, Redux, Firebase, axios<br>
+                                    Стэк: React, Redux, Firebase<br>
+                                </p>
+                                <p class="projects__paragraph">
                                     <a class="link_gray" href="https://github.com/AgarkovRoman/react-quiz-app"
-                                        target="_blank">Github
+                                        target="_blank" rel="noopener">Github
                                         проекта
                                     </a>
                                 </p>
@@ -91,19 +96,21 @@
                 </div>
                 <div class="projects__item item">
                     <div class="item__link">
-                        <a class="item__link_title" href="https://agarkovroman.github.io/budgetApp/"
-                            target="_blank">budget
+                        <a class="item__link_title" href="https://agarkovroman.github.io/recipes-app/dist/index.html"
+                            target="_blank" rel="noopener">recipes
                             app
                         </a>
                     </div>
                     <div class="item__container">
                         <div class="item__information">
                             <div class="information__container">
-                                <p class="projects__paragraph">Приложение для учёта доходов и&nbsp;расходов.</p>
+                                <p class="projects__paragraph">Приложение для поиска рецептов.</p>
                                 <p class="projects__paragraph">
-                                    Стэк: HTML, CSS, JS<br>
-                                    <a class="link_gray" href="https://github.com/AgarkovRoman/budgetApp"
-                                        target="_blank">Github
+                                    Стэк: JS, HTML, CSS, Webpack, Babel
+                                </p>
+                                <p class="projects__paragraph">
+                                    <a class="link_gray" href="https://github.com/AgarkovRoman/recipes-app"
+                                        target="_blank" rel="noopener">Github
                                         проекта
                                     </a>
                                 </p>
@@ -111,14 +118,18 @@
                         </div>
                         <div class="item__visual">
                             <div class="visual__container">
-                                <img class="projects__img" src="./img/projects/budget.png" alt="budget-app">
+                                <a href="https://agarkovroman.github.io/recipes-app/dist/index.html" target="_blank"
+                                    rel="noopener">
+                                    <img class="projects__img" src="./img/projects/recipe.png" alt="recipes-app">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="projects__item item">
                     <div class="item__link">
-                        <a class="item__link_title" href="https://agarkovroman.github.io/todoApp/" target="_blank">todo
+                        <a class="item__link_title" href="https://agarkovroman.github.io/todoApp/" target="_blank"
+                            rel="noopener">todo
                             app
                         </a>
                     </div>
@@ -127,9 +138,11 @@
                             <div class="information__container">
                                 <p class="projects__paragraph">Классическая тудушка.</p>
                                 <p class="projects__paragraph">
-                                    Стэк: HTML, CSS, JS<br>
-                                    <a class="link_gray" href="https://github.com/AgarkovRoman/todoApp"
-                                        target="_blank">Github
+                                    Стэк: HTML, CSS, JS
+                                </p>
+                                <p class="projects__paragraph">
+                                    <a class="link_gray" href="https://github.com/AgarkovRoman/todoApp" target="_blank"
+                                        rel="noopener">Github
                                         проекта
                                     </a>
                                 </p>
@@ -145,7 +158,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer wrapper">
+    <footer class="footer wrapper footer-wrapper">
         <div class="author-info">
             <div>
                 <p>Роман Агарков</p>
@@ -153,24 +166,31 @@
             <a class="link link_gray" href="mailto:r.agarkov.roman@gmail.com"
                 target="_blank">r.agarkov.roman@gmail.com</a>
             <a class="link link_gray" href="tel:+79218831026" target="_blank">+7 921 883-10-26</a>
-            <a class="link_gray" href="./files/Agarkov_Roman_cv.pdf" download>Скачать резюме</a>
+            <a class="link_gray link-cv" href="./files/Agarkov_Roman_cv.pdf" download>Скачать резюме</a>
         </div>
         <div class="social-links">
-            <div>
-                <a class="link link_gray" href="https://github.com/AgarkovRoman" target="_blank">Гитхаб</a>
-            </div>
-            <div>
-                <a class="link link_gray" href="https://www.facebook.com/agarkovromachka/" target="_blank">Фейсбук</a>
-            </div>
-            <div>
-                <a class="link link_gray" href="https://www.linkedin.com/in/roman-agarkov/" target="_blank">Линкедин</a>
-            </div>
-            <div>
-                <a class="link link_gray" href="https://www.instagram.com/agarkov_roman/" target="_blank">Инстаграм</a>
-            </div>
-            <div>
-                <a class="link link_gray" href="https://t.me/agarkov_roman" target="_blank">Телеграм</a>
-            </div>
+            <ul class="social-links__list">
+                <li class="social-link">
+                    <a class="link link_gray" href="https://github.com/AgarkovRoman" target="_blank"
+                        rel="noopener">Гитхаб</a>
+                </li>
+                <li class="social-link social-link_hidden">
+                    <a class="link link_gray" href="https://www.facebook.com/agarkovromachka/" target="_blank"
+                        rel="noopener">Фейсбук</a>
+                </li>
+                <li class="social-link social-link_hidden">
+                    <a class="link link_gray" href="https://www.linkedin.com/in/roman-agarkov/" target="_blank"
+                        rel="noopener">Линкедин</a>
+                </li>
+                <li class="social-link social-link_hidden">
+                    <a class="link link_gray" href="https://www.instagram.com/agarkov_roman/" target="_blank"
+                        rel="noopener">Инстаграм</a>
+                </li>
+                <li class="social-link">
+                    <a class="link link_gray" href="https://t.me/agarkov_roman" target="_blank"
+                        rel="noopener">Телеграм</a>
+                </li>
+            </ul>
         </div>
     </footer>
 </body>
