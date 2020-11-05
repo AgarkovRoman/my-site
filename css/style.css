@@ -186,6 +186,7 @@ img::selection{
 
 .projects__img {
     width: 100%;
+    height: auto;
     border-radius: .3rem;
 }
 
