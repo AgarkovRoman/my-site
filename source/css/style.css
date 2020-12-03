@@ -19,7 +19,8 @@ body {
 
 .wrapper {
     max-width: 1240px;
-    margin: 0 10%;
+    margin: 0 auto;
+    padding: 0 3%;
 }
 
 p::selection,
@@ -103,20 +104,42 @@ img::selection{
 
 .skills-container__skill {
     margin-right: 5px;
+    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    background-position-x: center;
 }
 
-.skills-container__skill_center {
-    align-self: center;
+.skills-container__skill:nth-child(1) {
+    background-image: url(../img/html.svg);
+}
+.skills-container__skill:nth-child(2) {
+    background-image: url(../img/css.svg);
+}
+.skills-container__skill:nth-child(3) {
+    background-image: url(../img/js.png);
+}
+.skills-container__skill:nth-child(4) {
+    background-image: url(../img/react.svg);
+}
+.skills-container__skill:nth-child(5) {
+    background-image: url(../img/redux.svg);
+}
+.skills-container__skill:nth-child(6) {
+    background-image: url(../img/git.png);
+}
+.skills-container__skill:nth-child(7) {
+    background-image: url(../img/sass.svg);
+}
+.skills-container__skill:nth-child(8) {
+    background-image: url(../img/gulp.svg);
 }
 
 .skill {
-    padding: 5px;
-}
 
-.skills-container__img {
-    width: 60px;
-    height: auto;
-    vertical-align: middle;
 }
 
 /*------------projects-----------*/
@@ -234,11 +257,12 @@ img::selection{
 @media only screen and (max-width: 1024px) {
 
     .wrapper {
-        margin: 0 7%;
+        /*margin: 0 7%;*/
     }
 
     .aboutme {
         margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .item__container {
@@ -296,7 +320,7 @@ img::selection{
 @media only screen and (max-width: 769px) { 
 
     .wrapper {
-        margin: 0 4%;
+        /*margin: 0 4%;*/
     }
     .aboutme {
         margin-top: 1rem;
