@@ -11,7 +11,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 24px;
-    background: red;
+
     word-spacing: 2px;
     letter-spacing: 1.2px;
     line-height: 1.5;
@@ -194,7 +194,7 @@ img::selection{
 }
 
 .information__container{
-    display: flex; 
+    display: flex;
     flex-direction: column;
     height: 60%;
 }
@@ -286,7 +286,7 @@ img::selection{
     .social-links{
         margin-bottom: 1rem;
         font-size: .8rem;
-    }   
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -316,7 +316,7 @@ img::selection{
 }
 
 
-@media only screen and (max-width: 769px) { 
+@media only screen and (max-width: 769px) {
 
     .wrapper {
         margin: 0 4%;
@@ -348,7 +348,7 @@ img::selection{
 }
 
 
-@media only screen and (max-width: 481px) { 
+@media only screen and (max-width: 481px) {
 
     .item__information {
         min-width: 200px;
@@ -364,3 +364,5 @@ img::selection{
     }
 
 }
+
+/*# sourceMappingURL=style.css.map */
