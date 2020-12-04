@@ -162,7 +162,7 @@ img::selection{
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    -webkit-text-stroke: .1px #313131;
+    -webkit-text-stroke: 0.1px #313131;
 }
 .item__link_title:hover {
     font-weight: 500;
@@ -180,6 +180,7 @@ img::selection{
 
 .item__container {
     display: flex;
+    flex-direction: row;
 }
 
 .item__information {
@@ -200,16 +201,19 @@ img::selection{
 
 .visual__container {
     display: flex;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
 }
 
 .projects__paragraph {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
     margin-bottom: 1rem;
 }
 
 .projects__img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: .3rem;
 }
 
@@ -226,7 +230,7 @@ img::selection{
     display: flex;
     flex-direction: column;
     width: 30%;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .link-cv {
@@ -238,7 +242,7 @@ img::selection{
     justify-content: space-around;
     align-items: flex-end;
     width: 70%;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .social-links__list {
@@ -294,11 +298,6 @@ img::selection{
     .skills {
         margin-bottom: 1.5rem;
     }
-
-    .footer-wrapper {
-        margin: 0 3%;
-    }
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -320,7 +319,7 @@ img::selection{
 @media only screen and (max-width: 769px) { 
 
     .wrapper {
-        /*margin: 0 4%;*/
+        margin: 0 4%;
     }
     .aboutme {
         margin-top: 1rem;
