@@ -2,14 +2,13 @@ const gulp = require('gulp')
 const plumber = require('gulp-plumber')
 const sourcemap = require('gulp-sourcemaps')
 const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
 const sync = require('browser-sync').create()
 
 const styles = () => {
-    return gulp.src('source/initial/css/*.css')
+    return gulp.src('source/css/initial/*.css')
         .pipe(plumber())
         .pipe(sourcemap.init())
-        .pipe(postcss([autoprefixer()]))
+//         .pipe( postcss([ require('autoprefixer') ]) )
         .pipe(sourcemap.write('.'))
         .pipe(gulp.dest('source/css'))
         .pipe(sync.stream())
@@ -18,7 +17,7 @@ const styles = () => {
 const server = () => {
     sync.init({
         server: {
-            baseDir: '/'
+            baseDir: './'
         },
         cors: true,
         notify: false,
@@ -27,7 +26,7 @@ const server = () => {
 }
 
 const watcher = () => {
-    gulp.watch('source/initial/css/**/*.css', gulp.series('styles'))
+    gulp.watch('source/css/initial/**/*.css', gulp.series('styles'))
     gulp.watch('./*.html').on('change', sync.reload)
 }
 
