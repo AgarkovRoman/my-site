@@ -1,0 +1,28 @@
+{
+  "name": "mysite",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gulp": "4.0.2",
+    "autoprefixer": "^10.0.4",
+    "browser-sync": "^2.26.13",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0"
+  },
+  "scripts": {
+    "start": "gulp server",
+    "build": "gulp styles"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
