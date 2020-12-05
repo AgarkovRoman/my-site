@@ -1,4 +1,4 @@
-* {
+*,::after,::before {
     margin: 0px;
     padding: 0px;
     -webkit-box-sizing: border-box;
@@ -19,7 +19,8 @@ body {
 
 .wrapper {
     max-width: 1240px;
-    margin: 0 10%;
+    margin: 0 auto;
+    padding: 0 3%;
 }
 
 p::selection,
@@ -70,7 +71,6 @@ img::selection{
 }
 
 .avatar {
-    width: 9rem;
     height: auto;
     border-radius: 50%;
 }
@@ -103,20 +103,42 @@ img::selection{
 
 .skills-container__skill {
     margin-right: 5px;
+    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    background-position-x: center;
 }
 
-.skills-container__skill_center {
-    align-self: center;
+.skills-container__skill:nth-child(1) {
+    background-image: url(../icons/html.svg);
+}
+.skills-container__skill:nth-child(2) {
+    background-image: url(../icons/css.svg);
+}
+.skills-container__skill:nth-child(3) {
+    background-image: url(../icons/js.png);
+}
+.skills-container__skill:nth-child(4) {
+    background-image: url(../icons/react.svg);
+}
+.skills-container__skill:nth-child(5) {
+    background-image: url(../icons/redux.svg);
+}
+.skills-container__skill:nth-child(6) {
+    background-image: url(../icons/git.png);
+}
+.skills-container__skill:nth-child(7) {
+    background-image: url(../icons/sass.svg);
+}
+.skills-container__skill:nth-child(8) {
+    background-image: url(../icons/gulp.svg);
 }
 
 .skill {
-    padding: 5px;
-}
 
-.skills-container__img {
-    width: 60px;
-    height: auto;
-    vertical-align: middle;
 }
 
 /*------------projects-----------*/
@@ -139,7 +161,7 @@ img::selection{
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    -webkit-text-stroke: .1px #313131;
+    -webkit-text-stroke: 0.1px #313131;
 }
 .item__link_title:hover {
     font-weight: 500;
@@ -157,6 +179,7 @@ img::selection{
 
 .item__container {
     display: flex;
+    flex-direction: row;
 }
 
 .item__information {
@@ -170,23 +193,26 @@ img::selection{
 }
 
 .information__container{
-    display: flex; 
+    display: flex;
     flex-direction: column;
     height: 60%;
 }
 
 .visual__container {
     display: flex;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
 }
 
 .projects__paragraph {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
     margin-bottom: 1rem;
 }
 
 .projects__img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: .3rem;
 }
 
@@ -203,7 +229,7 @@ img::selection{
     display: flex;
     flex-direction: column;
     width: 30%;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .link-cv {
@@ -215,7 +241,7 @@ img::selection{
     justify-content: space-around;
     align-items: flex-end;
     width: 70%;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .social-links__list {
@@ -234,11 +260,12 @@ img::selection{
 @media only screen and (max-width: 1024px) {
 
     .wrapper {
-        margin: 0 7%;
+        /*margin: 0 7%;*/
     }
 
     .aboutme {
         margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .item__container {
@@ -258,7 +285,7 @@ img::selection{
     .social-links{
         margin-bottom: 1rem;
         font-size: .8rem;
-    }   
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -270,11 +297,6 @@ img::selection{
     .skills {
         margin-bottom: 1.5rem;
     }
-
-    .footer-wrapper {
-        margin: 0 3%;
-    }
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -293,7 +315,7 @@ img::selection{
 }
 
 
-@media only screen and (max-width: 769px) { 
+@media only screen and (max-width: 769px) {
 
     .wrapper {
         margin: 0 4%;
@@ -325,7 +347,7 @@ img::selection{
 }
 
 
-@media only screen and (max-width: 481px) { 
+@media only screen and (max-width: 481px) {
 
     .item__information {
         min-width: 200px;
@@ -341,3 +363,5 @@ img::selection{
     }
 
 }
+
+/*# sourceMappingURL=style.css.map */

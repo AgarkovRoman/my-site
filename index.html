@@ -6,193 +6,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Роман Агарков — фронтенд-разработчик</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="source/css/style.css">
 </head>
 
 <body>
-    <header></header>
-    <main>
-        <section class="aboutme wrapper">
-            <img class="aboutme__avatar avatar" src="./img/avatar.png" alt='my-avatar'>
-            <h1 class="aboutme__title title">Роман Агарков&nbsp;&mdash; фронтенд-разработчик</h1>
-            <p class="aboutme__paragraph paragraph">
-                Имею опыт разработки своих проектов на&nbsp;JavaScript и&nbsp;React.<br>
-                В&nbsp;разработке на&nbsp;React использую route, hooks.<br> В&nbsp;связке с&nbsp;React&nbsp;&mdash;
-                redux,
-                axios, graphql и&nbsp;apollo client.<br>
-            </p>
-        </section>
-        <section class="skills wrapper">
-            <h4 class="skills__title title_small">Технологии:</h4>
-            <div class="skills-container">
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/html.svg" alt="html" title="HTML">
+<header></header>
+<main>
+    <section class="aboutme wrapper">
+        <picture>
+            <source srcset="./source/img/avatar@1x.webp 1x,
+                            ./source/img/avatar@2x.webp 2x"
+                    type="image/webp">
+            <img class="aboutme__avatar avatar" src="./source/img/avatar@1x.jpg" srcset="./source/img/avatar@2x.jpg 2x"
+                 alt="Аватар" width="300" height="300">
+        </picture>
+        <h1 class="aboutme__title title">Роман Агарков&nbsp;&mdash; фронтенд-разработчик</h1>
+        <p class="aboutme__paragraph paragraph">
+            <!--                Имею опыт разработки своих проектов на&nbsp;JavaScript и&nbsp;React.<br>-->
+            <!--                В&nbsp;разработке на&nbsp;React использую route, hooks.<br> В&nbsp;связке с&nbsp;React&nbsp;&mdash;-->
+            <!--                redux,-->
+            <!--                axios, graphql и&nbsp;apollo client.<br>-->
+        </p>
+    </section>
+    <section class="skills wrapper">
+        <h2 class="skills__title title_small">Технологии:</h2>
+        <div class="skills-container">
+            <div class="skills-container__skill skill"></div>
+            <div class="skills-container__skill skill"></div>
+            <div class="skills-container__skill skill"></div>
+            <div class="skills-container__skill skill"></div>
+            <div class="skills-container__skill skill"></div>
+            <div class="skills-container__skill skill"></div>
+            <div class="skills-container__skill skill"></div>
+            <div class="skills-container__skill skill"></div>
+            <!--                <div class="skills-container__skill skill"></div>-->
+            <!--                <div class="skills-container__skill skill"></div>-->
+            <!--                <div class="skills-container__skill skill"></div>-->
+        </div>
+    </section>
+    <section class="projects wrapper">
+        <h2 class="projects__title title_small">Проекты:</h2>
+        <div class="projects__container">
+            <article class="projects__item item">
+                <div class="item__link">
+                    <a class="item__link_title"  href="https://nameless-peak-83944.herokuapp.com/" target="_blank"
+                       rel="noopener">quiz app</a>
                 </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/css.svg " alt="css" title="CSS">
-                </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/js.png" alt="js" title="Javascript">
-                </div>
-                <div class="skills-container__skill skills-container__skill_center skill">
-                    <img class="skills-container__img" src="./img/react.svg" alt="react" title="React">
-                </div>
-                <div class="skills-container__skill skills-container__skill_center skill">
-                    <img class="skills-container__img" src="./img/redux.svg" alt="redux" title="Redux">
-                </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/git.png" alt="git" title="Git">
-                </div>
-                <div class="skills-container__skill skills-container__skill_center skill">
-                    <img class="skills-container__img" src="./img/sass.svg" alt="sass/scss" title="Sass/Scss">
-                </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" style="height: 60px;" src="./img/gulp.svg" alt="gulp"
-                        title="Gulp">
-                </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/ts.png" alt="ts" title="TypeScript">
-                </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/graphql.svg" alt="graphql" title="GraphQL">
-                </div>
-                <div class="skills-container__skill skill">
-                    <img class="skills-container__img" src="./img/apollo.png" alt="apollo" title="Apollo client">
-                </div>
-            </div>
-        </section>
-        <section class="projects wrapper">
-            <h4 class="projects__title title_small">Проекты:</h4>
-            <div class="projects__container">
-                <div class="projects__item item">
-                    <div class="item__link">
-                        <a class="item__link_title" href="https://nameless-peak-83944.herokuapp.com/" target="_blank"
-                            rel="noopener">
-                            quiz app
-                        </a>
-                    </div>
-                    <div class="item__container">
-                        <div class="item__information">
-                            <div class="information__container">
-                                <p class="projects__paragraph">Приложение для создания опросов и&nbsp;тестов
-                                    с&nbsp;регистрацией.</p>
-                                <p class="projects__paragraph">
-                                    Стэк: React, Redux, Firebase<br>
-                                </p>
-                                <p class="projects__paragraph">
-                                    <a class="link_gray" href="https://github.com/AgarkovRoman/react-quiz-app"
-                                        target="_blank" rel="noopener">Github
-                                        проекта
-                                    </a>
-                                </p>
-                            </div>
+                <div class="item__container">
+                    <div class="item__information">
+                        <div class="information__container">
+                            <h3 class="projects__paragraph">Приложение для создания опросов и&nbsp;тестов
+                                с&nbsp;регистрацией.</h3>
+                            <p class="projects__paragraph">
+                                Стэк: React, Redux, Firebase<br>
+                            </p>
+                            <p class="projects__paragraph">
+                                <a class="link_gray" href="https://github.com/AgarkovRoman/react-quiz-app"
+                                   target="_blank" rel="noopener">Github проекта</a>
+                            </p>
                         </div>
-                        <div class="item__visual">
-                            <div class="visual__container">
-                                <img class="projects__img" src="./img/projects/quiz.jpg" alt="quiz-app">
-                            </div>
+                    </div>
+                    <div class="item__visual">
+                        <div class="visual__container">
+                            <a href="https://github.com/AgarkovRoman/react-quiz-app" target="_blank" rel="noopener">
+                                <picture>
+                                    <source srcset="./source/img/projects/quiz@1x.webp 1x, ./source/img/projects/quiz@2x.webp 2x"
+                                            type="image/webp">
+                                    <img class="projects__img" src="./source/img/projects/quiz@1x.jpg"
+                                         srcset="./source/img/projects/quiz@2x.jpg 2x" alt="quiz-app" height="375"
+                                         width="635">
+                                </picture>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="projects__item item">
-                    <div class="item__link">
-                        <a class="item__link_title" href="https://agarkovroman.github.io/recipes-app/dist/index.html"
-                            target="_blank" rel="noopener">recipes
-                            app
-                        </a>
-                    </div>
-                    <div class="item__container">
-                        <div class="item__information">
-                            <div class="information__container">
-                                <p class="projects__paragraph">Приложение для поиска рецептов.</p>
-                                <p class="projects__paragraph">
-                                    Стэк: JS, HTML, CSS, Webpack, Babel
-                                </p>
-                                <p class="projects__paragraph">
-                                    <a class="link_gray" href="https://github.com/AgarkovRoman/recipes-app"
-                                        target="_blank" rel="noopener">Github
-                                        проекта
-                                    </a>
-                                </p>
-                            </div>
+            </article>
+            <article class="projects__item item">
+                <div class="item__link">
+                    <a class="item__link_title" href="https://agarkovroman.github.io/recipes-app/dist/index.html"
+                       target="_blank" rel="noopener">recipes app</a>
+                </div>
+                <div class="item__container">
+                    <div class="item__information">
+                        <div class="information__container">
+                            <h3 class="projects__paragraph">Приложение для поиска рецептов.</h3>
+                            <p class="projects__paragraph">
+                                Стэк: JS, HTML, CSS, Webpack, Babel
+                            </p>
+                            <p class="projects__paragraph">
+                                <a class="link_gray" href="https://github.com/AgarkovRoman/recipes-app"
+                                   target="_blank" rel="noopener">Github проекта</a>
+                            </p>
                         </div>
-                        <div class="item__visual">
-                            <div class="visual__container">
-                                <a href="https://agarkovroman.github.io/recipes-app/dist/index.html" target="_blank"
-                                    rel="noopener">
-                                    <img class="projects__img" src="./img/projects/recipe.jpg" alt="recipes-app">
+                    </div>
+                    <div class="item__visual">
+                        <div class="visual__container">
+                            <a href="https://agarkovroman.github.io/recipes-app/dist/index.html" target="_blank" rel="noopener">
+                                <picture>
+                                    <source srcset="./source/img/projects/recipe@1x.webp 1x, ./source/img/projects/recipe@2x.webp 2x"
+                                            type="image/webp">
+                                    <img class="projects__img" src="./source/img/projects/recipe@1x.jpg"
+                                         srcset="./source/img/projects/recipe@2x.jpg 2x" alt="recipes-app" height="375"
+                                         width="635">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="projects__item item">
+                <div class="item__link">
+                    <a class="item__link_title" href="https://agarkovroman.github.io/todoApp/" target="_blank"
+                       rel="noopener">todo app</a>
+                </div>
+                <div class="item__container">
+                    <div class="item__information">
+                        <div class="information__container">
+                            <h3 class="projects__paragraph">Классическая тудушка.</h3>
+                            <p class="projects__paragraph">
+                                Стэк: HTML, CSS, JS
+                            </p>
+                            <p class="projects__paragraph">
+                                <a class="link_gray" href="https://github.com/AgarkovRoman/todoApp" target="_blank"
+                                   rel="noopener">Github
+                                    проекта
                                 </a>
-                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item__visual">
+                        <div class="visual__container">
+                            <a href="https://agarkovroman.github.io/todoApp/" target="_blank"
+                               rel="noopener">
+                                <picture>
+                                    <source srcset="./source/img/projects/todo@1x.webp 1x, ./source/img/projects/todo@2x.webp 2x"
+                                            type="image/webp">
+                                    <img class="projects__img" src="./source/img/projects/todo@1x.jpg"
+                                         srcset="./source/img/projects/todo@2x.jpg 2x" alt="todo-app" height="375"
+                                         width="635">
+                                </picture>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="projects__item item">
-                    <div class="item__link">
-                        <a class="item__link_title" href="https://agarkovroman.github.io/todoApp/" target="_blank"
-                            rel="noopener">todo
-                            app
-                        </a>
-                    </div>
-                    <div class="item__container">
-                        <div class="item__information">
-                            <div class="information__container">
-                                <p class="projects__paragraph">Классическая тудушка.</p>
-                                <p class="projects__paragraph">
-                                    Стэк: HTML, CSS, JS
-                                </p>
-                                <p class="projects__paragraph">
-                                    <a class="link_gray" href="https://github.com/AgarkovRoman/todoApp" target="_blank"
-                                        rel="noopener">Github
-                                        проекта
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="item__visual">
-                            <div class="visual__container">
-                                <img class="projects__img" src="./img/projects/todo.jpg" alt="todo-app">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer wrapper footer-wrapper">
-        <div class="author-info">
-            <div>
-                <p>Роман Агарков</p>
-            </div>
-            <a class="link link_gray" href="mailto:r.agarkov.roman@gmail.com"
-                target="_blank">r.agarkov.roman@gmail.com</a>
-            <a class="link link_gray" href="tel:+79218831026" target="_blank">+7 921 883-10-26</a>
-            <a class="link_gray link-cv" href="./files/Agarkov_Roman_cv.pdf" download>Скачать резюме</a>
+            </article>
         </div>
-        <div class="social-links">
-            <ul class="social-links__list">
-                <li class="social-link">
-                    <a class="link link_gray" href="https://github.com/AgarkovRoman" target="_blank"
-                        rel="noopener">Гитхаб</a>
-                </li>
-                <li class="social-link social-link_hidden">
-                    <a class="link link_gray" href="https://www.facebook.com/agarkovromachka/" target="_blank"
-                        rel="noopener">Фейсбук</a>
-                </li>
-                <li class="social-link social-link_hidden">
-                    <a class="link link_gray" href="https://www.linkedin.com/in/roman-agarkov/" target="_blank"
-                        rel="noopener">Линкедин</a>
-                </li>
-                <li class="social-link social-link_hidden">
-                    <a class="link link_gray" href="https://www.instagram.com/agarkov_roman/" target="_blank"
-                        rel="noopener">Инстаграм</a>
-                </li>
-                <li class="social-link">
-                    <a class="link link_gray" href="https://t.me/agarkov_roman" target="_blank"
-                        rel="noopener">Телеграм</a>
-                </li>
-            </ul>
+    </section>
+</main>
+<footer class="footer wrapper">
+    <div class="author-info">
+        <div>
+            <p>Роман Агарков</p>
         </div>
-    </footer>
+        <a class="link link_gray" href="mailto:r.agarkov.roman@gmail.com"
+           target="_blank">r.agarkov.roman@gmail.com</a>
+        <a class="link link_gray" href="tel:+79218831026" target="_blank">+7 921 883-10-26</a>
+        <a class="link_gray link-cv" href="source/files/Agarkov_Roman_cv.pdf" download>Скачать резюме</a>
+    </div>
+    <nav class="social-links">
+        <ul class="social-links__list">
+            <li class="social-link">
+                <a class="link link_gray" href="https://github.com/AgarkovRoman" target="_blank"
+                   rel="noopener">Гитхаб</a>
+            </li>
+            <li class="social-link social-link_hidden">
+                <a class="link link_gray" href="https://www.facebook.com/agarkovromachka/" target="_blank"
+                   rel="noopener">Фейсбук</a>
+            </li>
+            <li class="social-link social-link_hidden">
+                <a class="link link_gray" href="https://www.linkedin.com/in/roman-agarkov/" target="_blank"
+                   rel="noopener">Линкедин</a>
+            </li>
+            <li class="social-link social-link_hidden">
+                <a class="link link_gray" href="https://www.instagram.com/agarkov_roman/" target="_blank"
+                   rel="noopener">Инстаграм</a>
+            </li>
+            <li class="social-link">
+                <a class="link link_gray" href="https://t.me/agarkov_roman" target="_blank"
+                   rel="noopener">Телеграм</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
 </body>
 
 </html>
