@@ -11,7 +11,6 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 24px;
-
     word-spacing: 2px;
     letter-spacing: 1.2px;
     line-height: 1.5;
@@ -114,28 +113,28 @@ img::selection{
 }
 
 .skills-container__skill:nth-child(1) {
-    background-image: url(../img/html.svg);
+    background-image: url(../icons/html.svg);
 }
 .skills-container__skill:nth-child(2) {
-    background-image: url(../img/css.svg);
+    background-image: url(../icons/css.svg);
 }
 .skills-container__skill:nth-child(3) {
-    background-image: url(../img/js.png);
+    background-image: url(../icons/js.png);
 }
 .skills-container__skill:nth-child(4) {
-    background-image: url(../img/react.svg);
+    background-image: url(../icons/react.svg);
 }
 .skills-container__skill:nth-child(5) {
-    background-image: url(../img/redux.svg);
+    background-image: url(../icons/redux.svg);
 }
 .skills-container__skill:nth-child(6) {
-    background-image: url(../img/git.png);
+    background-image: url(../icons/git.png);
 }
 .skills-container__skill:nth-child(7) {
-    background-image: url(../img/sass.svg);
+    background-image: url(../icons/sass.svg);
 }
 .skills-container__skill:nth-child(8) {
-    background-image: url(../img/gulp.svg);
+    background-image: url(../icons/gulp.svg);
 }
 
 .skill {
