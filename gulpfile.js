@@ -1,8 +1,8 @@
 const gulp = require('gulp')
 const plumber = require('gulp-plumber')
 const sourcemap = require('gulp-sourcemaps')
-// const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
+const postcss = require('gulp-postcss')
+// const autoprefixer = require('autoprefixer')
 const sync = require('browser-sync').create()
 const csso = require('gulp-csso')
 const rename = require('gulp-rename')
@@ -26,7 +26,7 @@ const css = () => {
 const browserSync = (done) => {
     sync.init({
         server: {
-            baseDir: './'
+            baseDir: 'source'
         },
         cors: true,
         notify: false,
@@ -87,15 +87,10 @@ const serverReload = (done) => {
 
 function watchFiles() {
     gulp.watch('source/css/initial/**/*.css', css);
-    gulp.watch('./*.html', serverReload);
+    gulp.watch('source/*.html', serverReload);
 }
 
 
 const watch = gulp.parallel(watchFiles, browserSync)
 
 exports.watch = watch
-exports.css = css
-
-// exports.default = gulp.series(
-//     css, server, watcher
-// )
