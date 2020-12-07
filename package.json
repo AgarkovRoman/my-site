@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "start": "gulp default",
-    "build": "gulp styles"
+    "start": "gulp start",
+    "build": "gulp build"
   },
   "browserslist": {
     "production": [
