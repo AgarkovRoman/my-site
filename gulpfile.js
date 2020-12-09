@@ -11,6 +11,8 @@ const webp = require('gulp-webp')
 const svgstore = require('gulp-svgstore')
 const del = require('del')
 
+/* Settings for local usage */
+
 const css = () => {
     return gulp.src('source/css/initial/*.css')
         .pipe(plumber())
@@ -19,19 +21,19 @@ const css = () => {
         .pipe(csso())
         .pipe(rename('styles.min.css'))
         .pipe(sourcemap.write('.'))
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest('source/css'))
         .pipe(sync.stream())
 }
 
 const browserSync = (done) => {
     sync.init({
         server: {
-            baseDir: 'build'
+            baseDir: 'source'
         },
         cors: true,
         notify: false,
         ui: false,
-        port: 8000
+        port: 3000
     })
     done()
 }
@@ -46,12 +48,48 @@ function watchFiles() {
     gulp.watch('source/*.html', serverReload);
 }
 
+
+/* Create svg sprite */
+
+const sprite = () => {
+    return gulp.src('source/icons/**/icon-*.svg')
+        .pipe(svgstore())
+        .pipe(rename('sprite.svg'))
+        .pipe(gulp.dest('source/icons'))
+}
+
+/* Create webp images */
+
+const gulpWebp = () => {
+    return gulp.src('source/img/**/*.{jpg,png}')
+        .pipe(webp({quality: 90}))
+        .pipe(gulp.dest('source/img'))
+}
+
+/* Settings for build */
+
 const clean = () => {
-    return del('build')
+    return del('docs')
+}
+
+const copy = () => {
+    return gulp.src([
+        "source/fonts/**/*.:{woff, woff2",
+        "source/img/**",
+        "source/css/*.min.css",
+        "source/files/**",
+        "source/icons/**",
+        "source/js/**",
+        "source/*.ico"
+    ], {base: 'source'}).pipe(gulp.dest('docs'))
+}
+
+const html = () => {
+    return gulp.src(['source/*.html'], {base: 'source'}).pipe(gulp.dest('docs'))
 }
 
 const images = () => {
-    return gulp.src('source/{img, icons}/**/*.{jpg,png,svg}')
+    return gulp.src('docs/{img, icons}/**/*.{jpg,png,svg}')
         .pipe(imagemin([
             imagemin.optipng({optimizationLevel: 3}),
             imagemin.mozjpeg({progressive: true}),
@@ -64,46 +102,13 @@ const images = () => {
         ]))
 }
 
-const gulpWebp = () => {
-    return gulp.src('source/img/**/*.{jpg,png}')
-        .pipe(webp({quality: 90}))
-        .pipe(gulp.dest('source/img'))
-}
+const start = gulp.parallel(watchFiles, browserSync)
+const build = gulp.series(clean, copy, html, images)
 
-const sprite = () => {
-    return gulp.src('source/icons/**/icon-*.svg')
-        .pipe(svgstore())
-        .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('build/icons'))
-}
-
-const copy = () => {
-    return gulp.src([
-        "source/fonts/**/*.:{woff, woff2",
-        "source/img/**",
-        "source/files/**",
-        "source/icons/**",
-        "source/js/**",
-        "source/*.ico"
-    ], {base: 'source'}).pipe(gulp.dest('build'))
-}
-
-const html = () => {
-    return gulp.src(['source/*.html'], {base: 'source'}).pipe(gulp.dest('build'))
-}
-
-const watch = gulp.parallel(watchFiles, browserSync)
-const build = gulp.series(clean, images, copy, css, sprite, html)
-const start = gulp.series(build, watch)
-
-exports.watch = watch
-exports.copy = copy
 exports.css = css
 exports.images = images
 exports.gulpWebp = gulpWebp
 exports.sprite = sprite
-exports.clean = clean
-exports.html = html
 
 exports.build = build
 exports.start = start
