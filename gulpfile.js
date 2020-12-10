@@ -78,6 +78,7 @@ const copy = () => {
         "source/img/**",
         "source/css/*.min.css",
         "source/files/**",
+        "source/CNAME",
         "source/icons/**",
         "source/js/**",
         "source/*.ico"
