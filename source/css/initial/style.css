@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+         url('../fonts/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+    url('../fonts/Raleway-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Light.woff2') format('woff2'),
+    url('../fonts/Raleway-Light.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 *,::after,::before {
     margin: 0px;
     padding: 0px;
@@ -8,7 +35,7 @@
 html,
 body {
     color: #313131;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 24px;
     word-spacing: 2px;
@@ -160,15 +187,17 @@ img::selection{
     font-size: 4rem;
     font-weight: bold;
     text-decoration: none;
-    color: #fff;
-    -webkit-text-stroke: 0.1px #313131;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #313131;
 }
+
 .item__link_title:hover {
-    font-weight: 500;
+    font-weight: 700;
     color: #313131;
-    -webkit-text-stroke: none;
+    -webkit-text-stroke-width: 0;
     transition: .4s;
 }
+
 .item__link_title::after {
     content: '';
     display: block;
