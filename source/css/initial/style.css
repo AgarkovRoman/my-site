@@ -36,7 +36,7 @@ html,
 body {
     color: #313131;
     font-family: 'Raleway', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 24px;
     word-spacing: 2px;
     letter-spacing: 1.2px;
@@ -82,7 +82,7 @@ img::selection{
 /*------------titles-----------*/
 
 .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .title_small {
@@ -377,6 +377,10 @@ img::selection{
 
 
 @media only screen and (max-width: 481px) {
+
+    .title {
+        font-size: 1.5rem;
+    }
 
     .item__information {
         min-width: 200px;
