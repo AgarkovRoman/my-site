@@ -147,7 +147,7 @@ template.innerHTML = `
         <div class="visual__container">
             <a id="project-link-2" target="_blank" rel="noopener">
                 <picture>
-                    <source type="image/webp">
+                    <source id='source-webp-mobile' type="image/webp">
                     <source id="img-mobile">
                     <source id="source-webp" type="image/webp">
                     <img id="img" class="projects__img" height="398" width="675">
@@ -185,7 +185,7 @@ class ProjectItem extends HTMLElement {
         sourceJpgOrPngMobile.srcset = this.getAttribute('jpg-or-png-mobile')
         sourceJpgOrPngMobile.media = this.getAttribute('mobile-img-media')
 
-        const sourceWebpMobile = this.shadowRoot.getElementById('source-webp')
+        const sourceWebpMobile = this.shadowRoot.getElementById('source-webp-mobile')
         sourceWebpMobile.srcset = this.getAttribute('webp-mobile')
         sourceWebpMobile.media = this.getAttribute('mobile-img-media')
     }
