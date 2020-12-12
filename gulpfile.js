@@ -10,7 +10,7 @@ const imagemin = require('gulp-imagemin')
 const webp = require('gulp-webp')
 const svgstore = require('gulp-svgstore')
 const del = require('del')
-
+const uglify = require('gulp-uglify');
 /* Settings for local usage */
 
 const css = () => {
@@ -22,6 +22,15 @@ const css = () => {
         .pipe(rename('styles.min.css'))
         .pipe(sourcemap.write('.'))
         .pipe(gulp.dest('source/css'))
+        .pipe(sync.stream())
+}
+
+const js = () => {
+    return gulp.src('source/js/components/*.js')
+        .pipe(plumber())
+        .pipe(uglify())
+        .pipe(rename('script.min.js'))
+        .pipe(gulp.dest('source/js'))
         .pipe(sync.stream())
 }
 
@@ -45,6 +54,7 @@ const serverReload = (done) => {
 
 function watchFiles() {
     gulp.watch('source/css/initial/**/*.css', css);
+    gulp.watch('source/js/*.js', js);
     gulp.watch('source/*.html', serverReload);
 }
 
@@ -107,6 +117,7 @@ const start = gulp.parallel(watchFiles, browserSync)
 const build = gulp.series(clean, copy, html, images)
 
 exports.css = css
+exports.js = js
 exports.images = images
 exports.gulpWebp = gulpWebp
 exports.sprite = sprite
