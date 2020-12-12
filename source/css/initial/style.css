@@ -164,87 +164,6 @@ img::selection{
     background-image: url(../icons/gulp.svg);
 }
 
-.skill {
-
-}
-
-/*------------projects-----------*/
-
-.projects__title {
-    margin-bottom: .5rem;
-}
-
-.projects__item {
-    margin-bottom: 2rem;
-}
-
-.item__link {
-    margin-top: -1.5rem;
-    margin-bottom: 1rem;
-}
-
-.item__link_title {
-    font-size: 4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #FFFFFF;
-    -webkit-text-stroke: 1px #313131;
-}
-
-.item__link_title:hover {
-    font-weight: 700;
-    color: #313131;
-    -webkit-text-stroke-width: 0;
-    transition: .4s;
-}
-
-.item__link_title::after {
-    content: '';
-    display: block;
-    background-color: #313131;
-    height: 1px;
-    width: 100%;
-}
-
-.item__container {
-    display: flex;
-    flex-direction: row;
-}
-
-.item__information {
-    width: 45%;
-    min-width: 450px;
-    padding: .3rem 1rem;
-}
-
-.item__visual {
-    width: 55%;
-}
-
-.information__container{
-    display: flex;
-    flex-direction: column;
-    height: 60%;
-}
-
-.visual__container {
-    display: flex;
-    /*justify-content: flex-end;*/
-}
-
-.projects__paragraph {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 300;
-    margin-bottom: 1rem;
-}
-
-.projects__img {
-    width: 100%;
-    height: auto;
-    border-radius: .3rem;
-}
-
 /*-----------footer-----------*/
 
 .footer {
@@ -297,25 +216,12 @@ img::selection{
         margin-bottom: 1rem;
     }
 
-    .item__container {
-        flex-wrap: wrap;
-    }
-
-    .item__information,
-    .item__visual {
-        width: 100%;
-    }
-
-    .visual__container {
-        width: 70%;
-        margin: 0 auto;
-    }
-
     .social-links{
         margin-bottom: 1rem;
         font-size: .8rem;
     }
 }
+
 
 @media only screen and (max-width: 1000px) {
 
@@ -327,6 +233,7 @@ img::selection{
         margin-bottom: 1.5rem;
     }
 }
+
 
 @media only screen and (max-width: 900px) {
 
@@ -358,19 +265,8 @@ img::selection{
         margin-bottom: 1.5rem;
     }
 
-    .visual__container {
-        width: 90%;
-    }
-
     .social-link {
         font-size: .6rem;
-    }
-
-    .item__link {
-        margin-top: 0;
-    }
-    .item__link_title {
-        font-size: 2rem;
     }
 
 }
@@ -380,11 +276,6 @@ img::selection{
 
     .title {
         font-size: 1.5rem;
-    }
-
-    .item__information {
-        min-width: 200px;
-        padding: 0;
     }
 
     .social-link_hidden {
